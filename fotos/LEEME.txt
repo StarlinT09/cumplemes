@@ -1,0 +1,7 @@
+Pon aquí tus fotos.
+
+- Nombres en minúsculas, sin espacios ni acentos: 01.jpg, 02.jpg, portada.jpg
+  (GitHub Pages distingue mayúsculas de minúsculas: "Foto.JPG" no es lo mismo que "foto.jpg").
+- Formato JPG (las fotos HEIC del iPhone conviértelas antes).
+- Tamaño recomendado: unos 1200 píxeles del lado más largo y menos de 400 KB cada una.
+- Después escribe los nombres en js/config.js.

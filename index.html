@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#FBEDEF">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Cumplemes">
+  <meta name="format-detection" content="telephone=no">
+  <title>Feliz cumplemes</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="cerrado">
+
+  <!-- Pantalla inicial: una hoja de calendario que se arranca al tocarla -->
+  <button class="intro" id="intro" type="button" aria-label="Abrir la página">
+    <span class="calendario">
+      <span class="pila"></span>
+      <span class="hoja">
+        <span class="hoja__mes" id="introMes"></span>
+        <span class="hoja__dia" id="introDia"></span>
+        <span class="hoja__semana" id="introSemana"></span>
+      </span>
+    </span>
+    <span class="intro__pista">Toca para abrir</span>
+  </button>
+
+  <!-- Botón de música (solo aparece si configuras una canción) -->
+  <button class="musica" id="musica" type="button" hidden aria-label="Música" aria-pressed="false">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+      <path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/>
+      <path class="ondas" d="M16 8.5a5 5 0 010 7M18.5 6a8.5 8.5 0 010 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path class="raya" d="M4 4l16 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+    </svg>
+  </button>
+
+  <main id="contenido">
+
+    <header class="portada" id="portada">
+      <h1 id="titulo" tabindex="-1"></h1>
+      <p class="saludo" id="saludo"></p>
+      <p class="desde" id="desde"></p>
+    </header>
+
+    <section class="tiempo" aria-labelledby="h-tiempo">
+      <h2 id="h-tiempo">Todo este tiempo</h2>
+      <p class="resumen" id="resumen"></p>
+      <div class="reloj" aria-hidden="true">
+        <div><b id="cDias">0</b><span>días</span></div>
+        <div><b id="cHoras">00</b><span>horas</span></div>
+        <div><b id="cMin">00</b><span>minutos</span></div>
+        <div><b id="cSeg">00</b><span>segundos</span></div>
+      </div>
+    </section>
+
+    <section class="galeria" id="galeria" aria-labelledby="h-galeria">
+      <h2 id="h-galeria">Nuestros momentos</h2>
+      <div class="carrusel" id="carrusel"></div>
+      <p class="contador-fotos" id="contadorFotos" aria-live="polite"></p>
+    </section>
+
+    <section class="razones" id="razones" aria-labelledby="h-razones">
+      <h2 id="h-razones">Por qué te quiero</h2>
+      <div class="razon" aria-live="polite">
+        <p id="razonTexto">Toca el botón para descubrir una razón.</p>
+      </div>
+      <div class="razon__pie">
+        <button class="boton" id="otraRazon" type="button">Descubrir una razón</button>
+        <span class="razon__num" id="razonNum"></span>
+      </div>
+    </section>
+
+    <section class="carta" id="cartaSeccion" aria-labelledby="h-carta">
+      <h2 id="h-carta">Para ti</h2>
+      <article class="papel" id="carta"></article>
+    </section>
+
+    <footer class="cierre">
+      <button class="corazon" id="corazon" type="button" aria-label="Enviar corazones">
+        <svg viewBox="0 0 24 24" width="44" height="44" aria-hidden="true">
+          <path fill="currentColor" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+      </button>
+      <p>Toca el corazón.</p>
+    </footer>
+
+  </main>
+
+  <!-- Visor de fotos a pantalla completa -->
+  <div class="visor" id="visor" role="dialog" aria-modal="true" aria-label="Foto ampliada" hidden>
+    <button class="visor__cerrar" id="visorCerrar" type="button" aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+        <path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <img id="visorImg" alt="">
+    <p class="visor__pie" id="visorPie"></p>
+    <p class="visor__num" id="visorNum"></p>
+  </div>
+
+  <!-- Capa donde flotan los corazones -->
+  <div class="lluvia" id="lluvia" aria-hidden="true"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
