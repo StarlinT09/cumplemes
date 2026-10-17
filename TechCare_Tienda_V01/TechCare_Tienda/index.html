@@ -1,0 +1,573 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TechCare | Tu tecnología, siempre funcionando</title>
+
+    <!-- Fuente tipográfica utilizada en el sitio -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Barra superior con el lema de la marca -->
+    <div class="topbar">
+        TECNOLOGÍA · CONFIANZA · SERVICIOS
+    </div>
+
+    <!-- =====================================================
+         1. ENCABEZADO PRINCIPAL
+         ===================================================== -->
+
+    <header class="header">
+
+        <!-- Logotipo y nombre de la empresa -->
+        <a class="brand" href="#inicio">
+
+            <span class="logo">
+                <img
+                    src="images/logo_TechCare.png"
+                    alt="Logotipo de TechCare"
+                    class="logo-image"
+                >
+            </span>
+
+            <span>
+                <strong>Tech<span>Care</span></strong>
+                <small>Tu tecnología, siempre funcionando.</small>
+            </span>
+
+        </a>
+
+        <!-- Botón del menú para pantallas pequeñas -->
+        <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Abrir menú"
+            aria-controls="nav"
+            aria-expanded="false"
+            type="button"
+        >
+            ☰
+        </button>
+
+        <!-- Enlaces a las secciones principales -->
+        <nav id="nav">
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#nosotros">Nosotros</a>
+        </nav>
+
+        <!-- Botón para abrir el carrito -->
+        <button class="cart-open" id="openCart" type="button">
+            🛒 Carrito <b id="count">0</b>
+        </button>
+
+    </header>
+
+    <main>
+
+        <!-- =====================================================
+             2. PRESENTACIÓN PRINCIPAL CON CARRUSEL
+             ===================================================== -->
+
+        <section
+            class="hero hero-carousel"
+            id="inicio"
+            aria-label="Presentación de TechCare"
+        >
+
+            <!-- Primera imagen del carrusel -->
+            <div
+                class="hero-slide active"
+                style="--slide-image: url('images/techcare-hero.jpg')"
+                aria-hidden="false"
+            ></div>
+
+            <!-- Segunda imagen del carrusel -->
+            <div
+                class="hero-slide"
+                style="--slide-image: url('https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=1800&q=85')"
+                aria-hidden="true"
+            ></div>
+
+            <!-- Tercera imagen del carrusel -->
+            <div
+                class="hero-slide"
+                style="--slide-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1800&q=85')"
+                aria-hidden="true"
+            ></div>
+
+            <!-- Texto que aparece sobre las imágenes -->
+            <div class="hero-text">
+
+                <span class="eyebrow">
+                    SOLUCIONES TECNOLÓGICAS EN UN SOLO LUGAR
+                </span>
+
+                <h1 id="heroTitle">
+                    Tu tecnología,<br>
+                    <em>en buenas manos.</em>
+                </h1>
+
+                <p id="heroDescription">
+                    Servicios de soporte técnico, productos de calidad y
+                    asistencia para tus dispositivos.
+                </p>
+
+                <!-- Botones principales -->
+                <div class="actions">
+
+                    <a class="button primary" href="#productos">
+                        Explorar productos →
+                    </a>
+
+                    <a class="button outline" href="#servicios">
+                        Ver servicios
+                    </a>
+
+                </div>
+
+                <!-- Características destacadas -->
+                <div class="mini-points">
+                    <span>✓ Atención personalizada</span>
+                    <span>✓ Soluciones prácticas</span>
+                </div>
+
+            </div>
+
+            <!-- Controles para cambiar de imagen -->
+            <button
+                class="carousel-arrow prev"
+                type="button"
+                aria-label="Imagen anterior"
+            >
+                ‹
+            </button>
+
+            <button
+                class="carousel-arrow next"
+                type="button"
+                aria-label="Imagen siguiente"
+            >
+                ›
+            </button>
+
+            <!-- Indicadores del carrusel -->
+            <div
+                class="carousel-dots"
+                role="group"
+                aria-label="Elegir imagen"
+            >
+
+                <button
+                    class="active"
+                    type="button"
+                    aria-label="Mostrar imagen 1"
+                    aria-pressed="true"
+                ></button>
+
+                <button
+                    type="button"
+                    aria-label="Mostrar imagen 2"
+                    aria-pressed="false"
+                ></button>
+
+                <button
+                    type="button"
+                    aria-label="Mostrar imagen 3"
+                    aria-pressed="false"
+                ></button>
+
+            </div>
+
+            <!-- Contador de imágenes -->
+            <span class="carousel-counter" aria-live="polite">
+                01 / 03
+            </span>
+
+        </section>
+
+        <!-- =====================================================
+             3. BENEFICIOS PRINCIPALES
+             ===================================================== -->
+
+        <section class="benefits">
+
+            <div>
+                <b>⌘</b>
+
+                <span>
+                    <strong>Accesorios seleccionados</strong>
+                    <small>Para tus dispositivos</small>
+                </span>
+            </div>
+
+            <div>
+                <b>⚙</b>
+
+                <span>
+                    <strong>Soporte técnico</strong>
+                    <small>Orientación clara</small>
+                </span>
+            </div>
+
+            <div>
+                <b>♡</b>
+
+                <span>
+                    <strong>Atención cercana</strong>
+                    <small>Soluciones a tu alcance</small>
+                </span>
+            </div>
+
+        </section>
+
+        <!-- =====================================================
+             4. CATÁLOGO DE PRODUCTOS
+             ===================================================== -->
+
+        <section class="section" id="productos">
+
+            <div class="section-title">
+
+                <div>
+                    <label>CATÁLOGO TECHCARE</label>
+
+                    <h2>
+                        Lo que necesitas,<br>
+                        <em>para seguir conectado.</em>
+                    </h2>
+                </div>
+
+                <p>
+                    Accesorios tecnológicos para tu hogar, tus estudios o tu
+                    espacio de trabajo.
+                </p>
+
+            </div>
+
+            <!-- Búsqueda y filtros de productos -->
+            <div class="controls">
+
+                <input
+                    id="search"
+                    type="search"
+                    placeholder="⌕  Buscar un producto..."
+                    aria-label="Buscar productos"
+                >
+
+                <div id="filters">
+
+                    <button class="active" data-cat="Todos" type="button">
+                        Todos
+                    </button>
+
+                    <button data-cat="Accesorios" type="button">
+                        Accesorios
+                    </button>
+
+                    <button data-cat="Conectividad" type="button">
+                        Conectividad
+                    </button>
+
+                    <button data-cat="Ergonomía" type="button">
+                        Ergonomía
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- JavaScript insertará las tarjetas de productos -->
+            <div class="grid" id="products"></div>
+
+            <p class="note"></p>
+
+        </section>
+
+        <!-- =====================================================
+             5. SERVICIOS TECNOLÓGICOS
+             ===================================================== -->
+
+        <section class="services" id="servicios">
+
+            <div class="service-intro">
+
+                <label>SERVICIOS TECNOLÓGICOS</label>
+
+                <h2>
+                    ¿Necesitas ayuda<br>
+                    con tus equipos?
+                </h2>
+
+                <p>
+                    Además de accesorios, te orientamos con servicios
+                    tecnológicos pensados para resolver problemas cotidianos.
+                </p>
+
+                <a class="button light" href="#contacto">
+                    Consultar un servicio →
+                </a>
+
+            </div>
+
+            <!-- Tarjetas de los servicios -->
+            <div class="service-grid">
+
+                <article>
+
+                    <b>⌘</b>
+
+                    <h3>Mantenimiento preventivo</h3>
+
+                    <p>
+                        Revisión básica y recomendaciones para cuidar tu
+                        computadora.
+                    </p>
+
+                    <strong>Desde RD$1,000</strong>
+
+                </article>
+
+                <article>
+
+                    <b>⌕</b>
+
+                    <h3>Diagnóstico tecnológico</h3>
+
+                    <p>
+                        Identificación inicial del problema y orientación
+                        sobre posibles soluciones.
+                    </p>
+
+                    <strong>Desde RD$500</strong>
+
+                </article>
+
+                <article>
+
+                    <b>◉</b>
+
+                    <h3>Asistencia remota</h3>
+
+                    <p>
+                        Ayuda guiada para consultas y configuraciones
+                        compatibles a distancia.
+                    </p>
+
+                    <strong>Desde RD$500</strong>
+
+                </article>
+
+            </div>
+
+            <small class="disclaimer"></small>
+
+        </section>
+
+        <!-- =====================================================
+             6. SOBRE NOSOTROS
+             ===================================================== -->
+
+        <section class="about section" id="nosotros">
+
+            <!-- Imagen del logotipo oficial de TechCare -->
+            <div class="about-art">
+
+                <div class="about-monogram">
+
+                    <img
+                        src="images/logo_TechCare.png"
+                        alt="Logotipo de TechCare"
+                        class="logo-image"
+                    >
+
+                </div>
+
+                <small>TECHNOLOGY CARE</small>
+
+            </div>
+
+            <!-- Información y valores de la empresa -->
+            <div>
+
+                <label>SOBRE TECHCARE</label>
+
+                <h2>
+                    Tecnología clara.<br>
+                    <em>Atención humana.</em>
+                </h2>
+
+                <p>
+                    Creemos que la tecnología debe facilitarte la vida.
+                    Por eso reunimos accesorios útiles y orientación técnica
+                    en una experiencia sencilla, cercana y profesional.
+                </p>
+
+                <div class="values">
+
+                    <span>01 / Confianza</span>
+                    <span>02 / Claridad</span>
+                    <span>03 / Servicio</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =====================================================
+             7. CONTACTO
+             ===================================================== -->
+
+        <section class="contact" id="contacto">
+
+            <div>
+
+                <label>¿TIENES UNA CONSULTA?</label>
+
+                <h2>Estamos aquí para ayudarte.</h2>
+
+                <p>
+                    Escríbenos para consultar productos o coordinar un
+                    servicio técnico.
+                </p>
+
+            </div>
+
+            <!-- Enlace de contacto por correo electrónico -->
+            <a
+                class="button light"
+                href="mailto:contacto@techcare.example?subject=Consulta%20TechCare"
+            >
+                Contactar a TechCare →
+            </a>
+
+        </section>
+
+    </main>
+
+    <!-- =====================================================
+         8. PIE DE PÁGINA
+         ===================================================== -->
+
+    <footer>
+
+        <!-- Logotipo oficial en el pie de página -->
+        <a class="brand" href="#inicio">
+
+            <span class="logo">
+
+                <img
+                    src="images/logo_TechCare.png"
+                    alt="Logotipo de TechCare"
+                    class="logo-image"
+                >
+
+            </span>
+
+            <span>
+                <strong>Tech<span>Care</span></strong>
+                <small>Tu tecnología, siempre funcionando.</small>
+            </span>
+
+        </a>
+
+        <!-- El año se actualizará mediante JavaScript -->
+        <p>
+            © <span id="year"></span> TechCare · Grupo #3
+        </p>
+
+        <a href="#inicio">Volver arriba ↑</a>
+
+    </footer>
+
+    <!-- =====================================================
+         9. PANEL LATERAL DEL CARRITO
+         ===================================================== -->
+
+    <!-- Fondo oscuro del carrito -->
+    <div class="shade" id="shade" hidden></div>
+
+    <!-- Panel lateral -->
+    <aside class="drawer" id="drawer" aria-hidden="true">
+
+        <!-- Encabezado del carrito -->
+        <div class="drawer-head">
+
+            <div>
+                <label>TU SELECCIÓN</label>
+                <h2>Mi carrito</h2>
+            </div>
+
+            <button
+                id="closeCart"
+                type="button"
+                aria-label="Cerrar carrito"
+            >
+                ×
+            </button>
+
+        </div>
+
+        <!-- Productos agregados al carrito -->
+        <div id="cartItems"></div>
+
+        <!-- Mensaje cuando el carrito está vacío -->
+        <div class="empty" id="empty">
+
+            <div>🛒</div>
+
+            <h3>Tu carrito está vacío</h3>
+
+            <p>
+                Agrega productos del catálogo para verlos aquí.
+            </p>
+
+            <button class="button primary" id="continue" type="button">
+                Ver productos
+            </button>
+
+        </div>
+
+        <!-- Resumen y subtotal -->
+        <div class="drawer-bottom" id="drawerBottom" hidden>
+
+            <p>
+                <span>Subtotal</span>
+                <strong id="total">RD$0</strong>
+            </p>
+
+            <small></small>
+
+            <button class="button primary" id="checkout" type="button">
+                Continuar
+            </button>
+
+        </div>
+
+    </aside>
+
+    <!-- Notificación temporal -->
+    <div class="toast" id="toast" role="status"></div>
+
+    <!-- Archivo JavaScript principal -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
